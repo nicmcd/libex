@@ -2,20 +2,30 @@
 *.slo
 *.lo
 *.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
 
 # Compiled Dynamic libraries
 *.so
 *.dylib
+*.dll
+
+# Fortran module files
+*.mod
 
 # Compiled Static libraries
 *.lai
 *.la
 *.a
+*.lib
 
-# Dependency files
-*.d
+# Executables
+*.exe
+*.out
+*.app
 
-# custom
-bin
-bld
-inc
+# bazel outputs
+bazel-*
