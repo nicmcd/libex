@@ -50,7 +50,7 @@ std::string vstrprintf(const char* _format, va_list _args) {
   char* buffer = new char[size];
 
   // printf into the buffer
-  int size2 = vsnprintf(buffer, (size_t)size,  _format, args2);
+  int size2 = vsnprintf(buffer, (size_t)size, _format, args2);
   (void)size2;
   assert((size2 + 1) >= size);
 
