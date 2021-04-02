@@ -38,29 +38,29 @@ namespace ex {
 namespace {
 
 std::string vstrprintf(const char* _format, va_list _args) {
-  // make a copy of the args
+  // Makes a copy of the args.
   va_list args2;
   va_copy(args2, _args);
 
-  // get the size of the output
+  // Gets the size of the output.
   int size = vsnprintf(nullptr, 0, _format, _args);
   size++;  // null char
 
-  // create a buffer large enough
+  // Creates a buffer large enough.
   char* buffer = new char[size];
 
-  // printf into the buffer
+  // Print into the buffer.
   int size2 = vsnprintf(buffer, (size_t)size, _format, args2);
   (void)size2;
   assert((size2 + 1) >= size);
 
-  // create a string
+  // Create a string from the buffer.
   std::string str(buffer);
 
-  // clean up buffer
+  // Cleans up the buffer.
   delete[] buffer;
 
-  // return the string
+  // Returns the string version
   return str;
 }
 

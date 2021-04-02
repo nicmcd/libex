@@ -32,7 +32,6 @@
 #define EX_EXCEPTION_H_
 
 #include <cstdarg>
-
 #include <exception>
 #include <string>
 
@@ -43,6 +42,7 @@ class Exception : public std::exception {
   Exception(const char* _format, ...);
   ~Exception();
   const char* what() const noexcept override;
+
  private:
   std::string msg_;
 };
